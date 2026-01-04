@@ -1,0 +1,23 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Report {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+
+  imageDataUrl String
+  goal         String
+  navItems     Int
+  ctaCount     Int
+  formFields   Int
+
+  score        Int
+  topFixes     Json
+  laws         Json
+}

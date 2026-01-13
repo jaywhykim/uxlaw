@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { Prisma } from "@prisma/client";
 import OpenAI from "openai";
 
 export const runtime = "nodejs";
@@ -177,8 +176,8 @@ export async function POST(req: Request) {
         formFields: 0,
 
         score,
-        topFixes: topFixes as unknown as Prisma.InputJsonValue,
-        laws: lawsToStore as unknown as Prisma.InputJsonValue,
+        topFixes: topFixes as any,
+        laws: lawsToStore as any,
       },
     });
 

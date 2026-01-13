@@ -74,7 +74,7 @@ export default function UploadButton() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{
         __html: `
           @keyframes spin {
             0% { transform: rotate(0deg); }

@@ -55,7 +55,7 @@ export default async function ResultsPage({
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{
         __html: `
           .results-container-${id} {
             display: grid;

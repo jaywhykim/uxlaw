@@ -128,7 +128,7 @@ export default function HomePage() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{
         __html: `
           .results-container-${uniqueId} {
             display: grid;
@@ -231,7 +231,7 @@ export default function HomePage() {
               >
                 {isRunning ? (
                   <>
-                    <style dangerouslySetInnerHTML={{
+                    <style suppressHydrationWarning dangerouslySetInnerHTML={{
                       __html: `
                         @keyframes spin {
                           0% { transform: rotate(0deg); }
